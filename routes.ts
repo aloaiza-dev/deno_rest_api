@@ -8,13 +8,13 @@ import {
 } from "./controllers/products.ts"
 
 const router = new Router()
-const BASE_URL = "/api/v1"
+const PRODUCTS_BASE_URL = "/api/v1/products"
 
 router
-    .get(`${BASE_URL}/products`, getProducts)
-    .get(`${BASE_URL}/products/:id`, getProduct)
-    .post(`${BASE_URL}/products`, addProduct)
-    .put(`${BASE_URL}/products/:id`, updateProduct)
-    .delete(`${BASE_URL}/products/:id`, deleteProduct)
+    .get(`${PRODUCTS_BASE_URL}`, getProducts)
+    .get(`${PRODUCTS_BASE_URL}/:id`, getProduct)
+    .post(`${PRODUCTS_BASE_URL}`, addProduct)
+    .put(`${PRODUCTS_BASE_URL}/:id`, updateProduct)
+    .delete(`${PRODUCTS_BASE_URL}/:id`, deleteProduct)
 
 export default router
